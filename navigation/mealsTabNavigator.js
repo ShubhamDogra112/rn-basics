@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import {Platform} from "react-native"
 import HomeStack from "./homeStackNavigator"
 import FavouriteStack from "./FavouriteStackNavigator"
+import AnimationScreen from "../screens/animatable"
 
 
 
@@ -19,11 +20,15 @@ const MealsTabNavigtor  = props => {
                 // display:props.authenticated ? null:'none'
               }}
               activeColor={Colors.secondaryColor}
-              shifting={true}
+              // shifting={true}
               // labeled={false}
               inactiveColor={'#777'}
               tabBarOptions={{
                 showLabel:true,
+                labelStyle:{
+                  marginBottom:10,
+                  color:'red'
+                }
                 // keyboardHidesTabBar:true
                 // activeBackgroundColor:'#ededed',
               }}>
@@ -51,6 +56,13 @@ const MealsTabNavigtor  = props => {
                     // tabBarColor:"#fff"
                     
                   }} />
+
+                <Tab.Screen
+                 name="Animation"
+                  component={AnimationScreen}
+                   />
+
+          
               </Tab.Navigator>
         
           
