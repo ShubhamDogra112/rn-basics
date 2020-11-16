@@ -40,7 +40,6 @@ const MealsTabNavigtor  = props => {
                     <Ionicons name="md-home" size={24} color={color} />
                   ),
                   // tabBarVisible:props.authenticated,
-
                   // tabBarColor:"#ededed",
 
                 

@@ -1,5 +1,5 @@
 import React  from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator ,CardStyleInterpolators , TransitionPresets } from "@react-navigation/stack";
 import CategoriesScreen from "../screens/CategoryScreen/CategoriesScreen";
 import CategoryMealScreen from "../screens/CategoryMealScreen/CategoryMealScreen";
 import MealsDetailScreen from "../screens/MealDetailScreen/MealDetailScreen";
@@ -26,9 +26,13 @@ const HomeNavigator = (props) => {
           headerStyle: {
             backgroundColor: Colors.primaryColor,
           },
+          gestureDirection:'horizontal',
+          gestureEnabled:true,
           headerTintColor: "#fff",
           headerTitleAlign: "center",
+          cardStyleInterpolator:CardStyleInterpolators.forHorizontalIOS
         }}
+        
       >
           <Stack.Screen
          name="Meal Categories"
